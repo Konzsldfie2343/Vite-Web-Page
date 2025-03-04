@@ -3,7 +3,7 @@
   display: grid;
   place-items: center;
   align-content: center;
-  grid-template-rows: 100px repeat(6, 600px) 300px;
+  grid-template-rows: 900px repeat(6, 600px) 300px;
   gap: 20px;
   color: white;
   overflow-x: hidden;

@@ -16,6 +16,8 @@
     justify-content: center;
     align-items: center;
     transform: translateX(calc(100vw - 70px)) translateY(calc(100vh - 70px));
+    top: 0;
+    left: 0;
 }
 
 .Hexagon {
@@ -32,4 +34,10 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     text-shadow: 0 0 0.4px orange;
+}
+
+@media screen and (max-width: 600px) {
+    .HomeBtnContainer {
+        transform: translateX(calc(100vw - 60px)) translateY(calc(100vh - 120px));
+    }
 }

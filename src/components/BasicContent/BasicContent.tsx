@@ -9,6 +9,7 @@ interface props {
     title: string,
     subTitle: string
     url: string
+    img: string
 }
 
 const variants = {
@@ -16,7 +17,7 @@ const variants = {
     visible: { opacity: 1, y: 0 },
 }
 
-const BasicContent = ({ title, subTitle, url }: props): JSX.Element => {
+const BasicContent = ({ title, subTitle, url, img }: props): JSX.Element => {
     const controls = useAnimation()
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -47,6 +48,15 @@ const BasicContent = ({ title, subTitle, url }: props): JSX.Element => {
                 </div>
                 <BasicButton url={url} />
             </div>
+            <motion.img
+                initial="hidden"
+                animate={controls}
+                variants={variants}
+                transition={{ duration: 0.5, type: "spring", damping: 50, stiffness: 100 }}
+                src={img}
+                alt="content img"
+                className={styles.img}
+            />
             <motion.div className={styles.stripe} />
         </motion.div>
     )

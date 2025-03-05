@@ -9,22 +9,22 @@ const NavigationBar = ({ contents }: { contents: { title: string, url: string }[
             className={styles.NavigationBar}
         >
             {contents.map((content, index) => (
-                <motion.div
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.1 } }}
-                    key={index}
-                    className={styles.content}
+                <Link
+                    to={`BasicContent${index + 1}`}
+                    smooth={true}
+                    duration={1000}
+                    offset={-250}
+                    className={styles.title}
                 >
-                    <Link
-                        to={`BasicContent${index + 1}`}
-                        smooth={true} 
-                        duration={1000}
-                        offset={-250}
-                        className={styles.title}
+                    <motion.div
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.1 } }}
+                        key={index}
+                        className={styles.content}
                     >
                         {content.title}
-                    </Link>
-                </motion.div>
+                    </motion.div>
+                </Link>
             ))}
         </motion.div>
     )

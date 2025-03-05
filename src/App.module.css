@@ -15,3 +15,9 @@
     grid-template-rows: 900px repeat(6, 900px) 300px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .App {
+    grid-template-rows: 800px repeat(6, 700px) 300px;
+  }
+}

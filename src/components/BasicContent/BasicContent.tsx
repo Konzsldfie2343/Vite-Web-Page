@@ -55,7 +55,7 @@ const BasicContent = ({ title, subTitle, url, img, id }: props): JSX.Element => 
                 animate={controls}
                 variants={variants}
                 transition={{ duration: 0.5, type: "spring", damping: 50, stiffness: 100 }}
-                src={img}
+                src={`${import.meta.env.BASE_URL}${img}`}
                 alt="content img"
                 className={styles.img}
             />

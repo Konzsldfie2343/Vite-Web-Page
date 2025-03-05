@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 const variants = {
-    hidden: { opacity: 0, scale: 0.5 },
+    hidden: { opacity: 0 },
 }
 
 const BasicButton = ({ url }: { url: string }): JSX.Element => {
@@ -16,7 +16,7 @@ const BasicButton = ({ url }: { url: string }): JSX.Element => {
 
     useEffect(() => {
         if (inView) {
-            controls.start({ opacity: 1, scale: 1 })
+            controls.start({ opacity: 1 })
         }
     }, [inView, controls])
 
@@ -27,7 +27,7 @@ const BasicButton = ({ url }: { url: string }): JSX.Element => {
             animate={controls}
             variants={variants}
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.9, filter: "brightness(0.8)" }}
             className={styles.BasicButton}
             onClick={() => window.open(url, '_blank')}
         >

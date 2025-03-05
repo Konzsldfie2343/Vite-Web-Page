@@ -16,4 +16,6 @@
     font-size: clamp(0.3rem, calc(1rem + 1.25vw), 1.5rem);
     font-weight: bold;
     text-shadow: 0 0 2px black;
+    color: white;
+    text-decoration: none;
 }

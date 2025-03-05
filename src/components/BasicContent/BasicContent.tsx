@@ -10,6 +10,7 @@ interface props {
     subTitle: string
     url: string
     img: string
+    id: string
 }
 
 const variants = {
@@ -17,7 +18,7 @@ const variants = {
     visible: { opacity: 1, y: 0 },
 }
 
-const BasicContent = ({ title, subTitle, url, img }: props): JSX.Element => {
+const BasicContent = ({ title, subTitle, url, img, id }: props): JSX.Element => {
     const controls = useAnimation()
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -32,6 +33,7 @@ const BasicContent = ({ title, subTitle, url, img }: props): JSX.Element => {
 
     return (
         <motion.div
+            id={id}
             ref={ref}
             initial="hidden"
             animate={controls}

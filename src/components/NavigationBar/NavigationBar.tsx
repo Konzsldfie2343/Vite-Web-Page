@@ -1,6 +1,7 @@
 import { JSX } from 'react'
 import styles from './NavigationBar.module.css'
 import { motion } from 'motion/react'
+import { Link } from "react-scroll"
 
 const NavigationBar = ({ contents }: { contents: { title: string, url: string }[] }): JSX.Element => {
     return (
@@ -14,7 +15,15 @@ const NavigationBar = ({ contents }: { contents: { title: string, url: string }[
                     key={index}
                     className={styles.content}
                 >
-                    <div className={styles.title}>{content.title}</div>
+                    <Link
+                        to={`BasicContent${index + 1}`}
+                        smooth={true} 
+                        duration={1000}
+                        offset={-250}
+                        className={styles.title}
+                    >
+                        {content.title}
+                    </Link>
                 </motion.div>
             ))}
         </motion.div>

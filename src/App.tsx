@@ -24,7 +24,14 @@ const App = (): JSX.Element => {
       <NavigationBar contents={contents} />
       <MainVisual />
       {contents.map((content, index) => (
-        <BasicContent key={index} title={content.title} subTitle={content.subTitle} url={content.url} img={content.img} />
+        <BasicContent
+          key={index}
+          title={content.title}
+          subTitle={content.subTitle}
+          url={content.url}
+          img={content.img}
+          id={`BasicContent${index + 1}`}
+        />
       ))}
       <Footer />
     </div>

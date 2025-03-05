@@ -1,11 +1,18 @@
 import { JSX } from 'react'
 import styles from './NavigationBar.module.css'
+import { motion } from 'motion/react'
 
-const NavigationBar = (): JSX.Element => {
+const NavigationBar = ({ contents }: { contents: { title: string, url: string }[] }): JSX.Element => {
     return (
-        <div className={styles.NavigationBar}>
-            NavigationBar Component
-        </div>
+        <motion.div
+            className={styles.NavigationBar}
+        >
+            {contents.map((content, index) => (
+                <div key={index} className={styles.content}>
+                    <div>{content.title}</div>
+                </div>
+            ))}
+        </motion.div>
     )
 }
 

@@ -1,13 +1,56 @@
 .BasicContent {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1.5fr 1fr 100px;
+    place-items: center;
+    align-content: center;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(30deg, gray, black);
+    clip-path: polygon(0 0, 30% 0, 33% 10%, 100% 10%, 100% 100%, 33% 100%, 30% 90%, 0 90%);
+    overflow: hidden;
+}
+
+.textContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    gap: 30px;
+}
+
+.title {
     color: white;
     text-shadow: 0 0 3px orange;
     font-weight: bold;
-    font-size: 5rem;
-    /* background: linear-gradient(30deg, rgba(0, 0, 255, 0.5), rgb(0, 150, 255)); */
-    background: linear-gradient(30deg, rgba(255, 255, 0, 0.7), rgba(255, 166, 0, 0.7));
+    font-size: clamp(1rem, calc(3.5rem + 1.25vw), 5rem);
+    text-wrap: balance;
+    line-height: normal;
+    text-align: left;
+}
+
+.subTitle {
+    color: white;
+    text-shadow: 0 0 1px orange;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.stripe {
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(245, 245, 245, 0.8),
+        rgba(245, 245, 245, 0.8) 50px,
+        rgba(128, 128, 128, 0.5) 50px,
+        rgba(128, 128, 128, 0.5) 100px
+    );
+    outline: 1px solid black;
+    box-shadow: 0 0 3px black;
+    grid-column: 3;
+    grid-row: 1 / 4;
 }

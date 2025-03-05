@@ -5,6 +5,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar.tsx'
 import BasicContent from './components/BasicContent/BasicContent.tsx'
 import Footer from './components/Footer/Footer.tsx'
 import MainVisual from './components/MainVisual/MainVisual.tsx'
+import HomeBtn from './components/HomeBtn/HomeBtn.tsx'
 
 document.onselectstart = () => false;
 document.ondragstart = () => false;
@@ -34,6 +35,7 @@ const App = (): JSX.Element => {
         />
       ))}
       <Footer />
+      <HomeBtn />
     </div>
   )
 }

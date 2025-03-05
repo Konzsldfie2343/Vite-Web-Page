@@ -8,7 +8,14 @@
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     z-index: 9999;
     background: linear-gradient(30deg, gray, black);
-    transform: translateX(calc(100vw - 110px)) translateY(calc(100vh - 100px));
+}
+
+.HomeBtnContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(calc(100vw - 70px)) translateY(calc(100vh - 70px));
 }
 
 .Hexagon {

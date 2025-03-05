@@ -4,7 +4,9 @@ import { JSX } from 'react'
 const Footer = (): JSX.Element => {
     return (
         <div className={styles.Footer}>
-            Footer Component
+            <a className={styles.link} href="https://utils-tauri.booth.pm">
+                Booth Utility Shop
+            </a>
         </div>
     )
 }

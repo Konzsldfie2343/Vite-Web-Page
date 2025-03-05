@@ -12,7 +12,7 @@ document.ondragstart = () => false;
 
 const contents = [
   { title: "WebP Comverter", subTitle: "画像を自動で軽量化", url: "https://utils-tauri.booth.pm/items/6571987", img: "/1.webp" },
-  { title: "Youtube Downloader", subTitle: "動画を自動でダウンロード", url: "https://utils-tauri.booth.pm/items/6595267", img: "/2.webp" },
+  { title: "Youtube Downloader", subTitle: "動画を簡単にダウンロード", url: "https://utils-tauri.booth.pm/items/6595267", img: "/2.webp" },
   { title: "MAGI SYSTEM", subTitle: "旧劇・EVANGELION MAGIを再現", url: "https://utils-tauri.booth.pm/items/6611730", img: "/3.webp" },
   { title: "MAGI ACHIRAL", subTitle: "新劇・EVANGELION MAGIを再現", url: "https://utils-tauri.booth.pm/items/6619667", img: "/4.webp" },
   { title: "EVA TIMER", subTitle: "エヴァ活動限界タイマー", url: "https://utils-tauri.booth.pm/items/6623543", img: "/5.webp" },
